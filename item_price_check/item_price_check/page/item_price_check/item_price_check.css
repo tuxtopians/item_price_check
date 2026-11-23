@@ -1,0 +1,205 @@
+/* Item Price Check desk page */
+
+.ipc-page {
+	color: #1f2937;
+	max-width: 1100px;
+	margin: 0 auto 32px;
+}
+
+.ipc-page .ipc-item-meta {
+	display: grid;
+	grid-template-columns: repeat(4, minmax(0, 1fr));
+	gap: 12px;
+	margin: 8px 0 16px;
+	padding: 12px 14px;
+	background: #f8fafc;
+	border: 1px solid #e2e8f0;
+	border-radius: 6px;
+}
+
+.ipc-page .ipc-meta-label {
+	font-size: 11px;
+	font-weight: 700;
+	letter-spacing: 0.04em;
+	text-transform: uppercase;
+	opacity: 0.7;
+	margin-bottom: 2px;
+}
+
+.ipc-page .ipc-meta-value {
+	font-size: 14px;
+	font-weight: 600;
+}
+
+.ipc-page .ipc-cards {
+	display: grid;
+	grid-template-columns: repeat(4, minmax(0, 1fr));
+	gap: 12px;
+	margin-bottom: 20px;
+}
+
+.ipc-page .ipc-card {
+	background: #fff;
+	border: 1px solid #d0d7e2;
+	border-radius: 6px;
+	padding: 14px 16px;
+}
+
+.ipc-page .ipc-card .ipc-card-label {
+	font-size: 11px;
+	font-weight: 700;
+	letter-spacing: 0.05em;
+	text-transform: uppercase;
+	opacity: 0.7;
+	margin-bottom: 6px;
+}
+
+.ipc-page .ipc-card .ipc-card-value {
+	font-size: 22px;
+	font-weight: 700;
+	line-height: 1.2;
+}
+
+.ipc-page .ipc-card.ipc-card-fts .ipc-card-value {
+	color: #0f766e;
+}
+
+.ipc-page .ipc-section-title {
+	font-size: 13px;
+	font-weight: 700;
+	margin: 18px 0 8px;
+}
+
+.ipc-page .ipc-table-wrap {
+	overflow-x: auto;
+	border: 1px solid #e2e8f0;
+	border-radius: 6px;
+	background: #fff;
+}
+
+.ipc-page table.ipc-table {
+	width: 100%;
+	margin: 0;
+	border-collapse: collapse;
+}
+
+.ipc-page table.ipc-table th,
+.ipc-page table.ipc-table td {
+	padding: 10px 12px;
+	border-bottom: 1px solid #eef2f7;
+	text-align: left;
+	vertical-align: middle;
+}
+
+.ipc-page table.ipc-table th {
+	font-size: 11px;
+	text-transform: uppercase;
+	letter-spacing: 0.04em;
+	background: #f8fafc;
+	color: #475569;
+}
+
+.ipc-page table.ipc-table td.ipc-num {
+	text-align: right;
+	font-variant-numeric: tabular-nums;
+}
+
+.ipc-page table.ipc-table tr.ipc-row-warn {
+	background: #fff7ed;
+}
+
+.ipc-page table.ipc-table tr.ipc-row-danger {
+	background: #fef2f2;
+}
+
+.ipc-page table.ipc-table tr.ipc-row-excluded {
+	opacity: 0.65;
+}
+
+.ipc-page table.ipc-table tr.ipc-clickable {
+	cursor: pointer;
+}
+
+.ipc-page table.ipc-table tr.ipc-clickable:hover {
+	background: #f1f5f9;
+}
+
+.ipc-page .ipc-badge {
+	display: inline-block;
+	padding: 2px 8px;
+	border-radius: 999px;
+	font-size: 11px;
+	font-weight: 600;
+	background: #e2e8f0;
+	color: #334155;
+}
+
+.ipc-page .ipc-badge-available {
+	background: #ccfbf1;
+	color: #0f766e;
+}
+
+.ipc-page .ipc-badge-unavailable {
+	background: #ffedd5;
+	color: #c2410c;
+}
+
+.ipc-page .ipc-badge-negative {
+	background: #fee2e2;
+	color: #b91c1c;
+}
+
+.ipc-page .ipc-badge-excluded {
+	background: #e2e8f0;
+	color: #64748b;
+}
+
+.ipc-page .ipc-badge-return {
+	background: #fee2e2;
+	color: #b91c1c;
+	margin-left: 6px;
+}
+
+.ipc-page .ipc-price-grid {
+	display: grid;
+	grid-template-columns: repeat(4, minmax(0, 1fr));
+	gap: 12px;
+	margin-bottom: 8px;
+}
+
+.ipc-page .ipc-empty,
+.ipc-page .ipc-error {
+	padding: 28px 16px;
+	text-align: center;
+	color: #64748b;
+	border: 1px dashed #cbd5e1;
+	border-radius: 6px;
+	background: #f8fafc;
+}
+
+.ipc-page .ipc-error {
+	color: #b91c1c;
+	border-color: #fecaca;
+	background: #fef2f2;
+}
+
+.ipc-page .ipc-muted {
+	color: #64748b;
+	font-size: 12px;
+}
+
+@media (max-width: 900px) {
+	.ipc-page .ipc-item-meta,
+	.ipc-page .ipc-cards,
+	.ipc-page .ipc-price-grid {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+	}
+}
+
+@media (max-width: 560px) {
+	.ipc-page .ipc-item-meta,
+	.ipc-page .ipc-cards,
+	.ipc-page .ipc-price-grid {
+		grid-template-columns: 1fr;
+	}
+}
