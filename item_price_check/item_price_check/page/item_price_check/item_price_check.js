@@ -262,7 +262,7 @@ class ItemPriceCheckPage {
 						</td>
 						<td class="ipc-num">${this.fmt_qty(row.qty)}</td>
 						<td class="ipc-num">${this.fmt_money(row.rate, row.currency)}</td>
-						<td>${frappe.utils.escape_html(row.currency || "")}</td>
+						<td class="ipc-num">${frappe.utils.escape_html(row.currency || "")}</td>
 					</tr>
 				`;
 			})
@@ -271,12 +271,18 @@ class ItemPriceCheckPage {
 		return `
 			<div class="ipc-table-wrap">
 				<table class="ipc-table ipc-sales-table">
+					<colgroup>
+						<col style="width: 25%" />
+						<col style="width: 25%" />
+						<col style="width: 25%" />
+						<col style="width: 25%" />
+					</colgroup>
 					<thead>
 						<tr>
 							<th>${__("Posting Date")}</th>
 							<th class="ipc-num">${__("Quantity")}</th>
 							<th class="ipc-num">${__("Rate")}</th>
-							<th>${__("Currency")}</th>
+							<th class="ipc-num">${__("Currency")}</th>
 						</tr>
 					</thead>
 					<tbody>${body}</tbody>

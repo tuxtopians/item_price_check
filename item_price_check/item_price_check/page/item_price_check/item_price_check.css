@@ -131,21 +131,19 @@
 	width: 16%;
 }
 
-.ipc-page table.ipc-sales-table th:nth-child(1),
-.ipc-page table.ipc-sales-table td:nth-child(1) {
-	width: 34%;
+.ipc-page table.ipc-sales-table {
+	width: 100%;
+	table-layout: fixed;
 }
 
-.ipc-page table.ipc-sales-table th:nth-child(2),
-.ipc-page table.ipc-sales-table td:nth-child(2),
-.ipc-page table.ipc-sales-table th:nth-child(3),
-.ipc-page table.ipc-sales-table td:nth-child(3) {
-	width: 22%;
+.ipc-page table.ipc-sales-table th,
+.ipc-page table.ipc-sales-table td {
+	width: 25%;
 }
 
 .ipc-page table.ipc-sales-table th:nth-child(4),
 .ipc-page table.ipc-sales-table td:nth-child(4) {
-	width: 22%;
+	text-align: right;
 }
 
 .ipc-page table.ipc-table tr.ipc-row-warn {
