@@ -203,7 +203,7 @@ class ItemPriceCheckPage {
 						<td class="ipc-num">${this.fmt_qty(row.actual_qty)}</td>
 						<td class="ipc-num">${this.fmt_qty(row.reserved_qty)}</td>
 						<td class="ipc-num">${this.fmt_qty(row.free_to_sell)}</td>
-						<td>${this.status_badge(row.stock_status)}</td>
+						<td class="ipc-status">${this.status_badge(row.stock_status)}</td>
 					</tr>
 				`;
 			})
@@ -211,14 +211,14 @@ class ItemPriceCheckPage {
 
 		return `
 			<div class="ipc-table-wrap">
-				<table class="ipc-table">
+				<table class="ipc-table ipc-stock-table">
 					<thead>
 						<tr>
 							<th>${__("Warehouse")}</th>
 							<th class="ipc-num">${__("Actual Qty")}</th>
 							<th class="ipc-num">${__("Reserved Qty")}</th>
 							<th class="ipc-num">${__("Free To Sell")}</th>
-							<th>${__("Stock Status")}</th>
+							<th class="ipc-status">${__("Stock Status")}</th>
 						</tr>
 					</thead>
 					<tbody>${body}</tbody>
@@ -263,7 +263,6 @@ class ItemPriceCheckPage {
 						<td class="ipc-num">${this.fmt_qty(row.qty)}</td>
 						<td class="ipc-num">${this.fmt_money(row.rate, row.currency)}</td>
 						<td>${frappe.utils.escape_html(row.currency || "")}</td>
-						<td>${frappe.utils.escape_html(row.customer_name || row.customer || "")}</td>
 					</tr>
 				`;
 			})
@@ -271,14 +270,13 @@ class ItemPriceCheckPage {
 
 		return `
 			<div class="ipc-table-wrap">
-				<table class="ipc-table">
+				<table class="ipc-table ipc-sales-table">
 					<thead>
 						<tr>
 							<th>${__("Posting Date")}</th>
 							<th class="ipc-num">${__("Quantity")}</th>
 							<th class="ipc-num">${__("Rate")}</th>
 							<th>${__("Currency")}</th>
-							<th>${__("Customer")}</th>
 						</tr>
 					</thead>
 					<tbody>${body}</tbody>

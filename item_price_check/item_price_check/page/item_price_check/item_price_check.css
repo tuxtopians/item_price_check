@@ -81,6 +81,7 @@
 	width: 100%;
 	margin: 0;
 	border-collapse: collapse;
+	table-layout: fixed;
 }
 
 .ipc-page table.ipc-table th,
@@ -89,6 +90,7 @@
 	border-bottom: 1px solid #eef2f7;
 	text-align: left;
 	vertical-align: middle;
+	overflow-wrap: anywhere;
 }
 
 .ipc-page table.ipc-table th {
@@ -99,9 +101,51 @@
 	color: #475569;
 }
 
+.ipc-page table.ipc-table th.ipc-num,
 .ipc-page table.ipc-table td.ipc-num {
 	text-align: right;
 	font-variant-numeric: tabular-nums;
+}
+
+.ipc-page table.ipc-table th.ipc-status,
+.ipc-page table.ipc-table td.ipc-status {
+	text-align: center;
+}
+
+.ipc-page table.ipc-stock-table th:nth-child(1),
+.ipc-page table.ipc-stock-table td:nth-child(1) {
+	width: 36%;
+}
+
+.ipc-page table.ipc-stock-table th:nth-child(2),
+.ipc-page table.ipc-stock-table td:nth-child(2),
+.ipc-page table.ipc-stock-table th:nth-child(3),
+.ipc-page table.ipc-stock-table td:nth-child(3),
+.ipc-page table.ipc-stock-table th:nth-child(4),
+.ipc-page table.ipc-stock-table td:nth-child(4) {
+	width: 16%;
+}
+
+.ipc-page table.ipc-stock-table th:nth-child(5),
+.ipc-page table.ipc-stock-table td:nth-child(5) {
+	width: 16%;
+}
+
+.ipc-page table.ipc-sales-table th:nth-child(1),
+.ipc-page table.ipc-sales-table td:nth-child(1) {
+	width: 34%;
+}
+
+.ipc-page table.ipc-sales-table th:nth-child(2),
+.ipc-page table.ipc-sales-table td:nth-child(2),
+.ipc-page table.ipc-sales-table th:nth-child(3),
+.ipc-page table.ipc-sales-table td:nth-child(3) {
+	width: 22%;
+}
+
+.ipc-page table.ipc-sales-table th:nth-child(4),
+.ipc-page table.ipc-sales-table td:nth-child(4) {
+	width: 22%;
 }
 
 .ipc-page table.ipc-table tr.ipc-row-warn {
